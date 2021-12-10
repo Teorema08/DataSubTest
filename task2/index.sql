@@ -19,4 +19,4 @@ INNER JOIN
        GROUP BY Students.StudentId
        ) AS FailedExams ON FailedExams.StudentId = Students.StudentId AND FailedExams.NumberOfFailed >= 2
   GROUP BY [Students.Group]
-  HAVING COUNT(FailedExam.StudentId) >= 10
+  HAVING count(*) >= 10
